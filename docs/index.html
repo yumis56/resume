@@ -1,33 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!--head is metadata-->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Yumi Song - Resume</title>
-        <style>
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yumi Song - Resume</title>
+    <script src="https://kit.fontawesome.com/6012395552.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .contact-info p {
+            margin: 0 10px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .flex-item {
+            flex: 1 1 300px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .skill-category {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .skill-category h3 {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .work-experience, .volunteer-experience {
+            margin-bottom: 20px;
+        }
+        .work-experience h3, .volunteer-experience h3 {
+            margin-bottom: 5px;
+        }
+        .work-experience p, .volunteer-experience p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
             }
+            .contact-info {
+                flex-direction: column;
+            }
+            .contact-info p {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yumi Song</h1>
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Livingston, NJ</p>
+            <p><i class="fas fa-phone"></i> +1 201 673 6367</p>
+            <p><i class="fas fa-envelope"></i> song.yumi@outlook.com</p>
+        </div>
+    </header>
 
-            li {
-                float: left;
-            }
-        </style>
-   
-    </head> 
-    <body>
-        <main>
-            <h1>Yumi Song</h1>
+    <section>
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <p>Bachelor of Science in Information Technology</p>
+        <p>New Jersey Institute of Technology</p>
+    </section>
+
+    <section>
+        <h2><i class="fas fa-tools"></i> Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>C#</li>
+                    <li>C/C++</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Web Development</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Software</h3>
+                <ul>
+                    <li>Visual Studio / VS Code</li>
+                    <li>Unity and Unity VR</li>
+                    <li>Blender</li>
+                    <li>VMware</li>
+                    <li>Ansible</li>
+                    <li>Git</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Databases</h3>
+                <ul>
+                    <li>Microsoft SQL Server</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Microsoft</h3>
+                <ul>
+                    <li>Office Suite</li>
+                    <li>Teams</li>
+                    <li>Copilot</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Operating Systems</h3>
+                <ul>
+                    <li>Windows</li>
+                    <li>Linux</li>
+                    <li>Android</li>
+                    <li>iOS</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+        <div class="flex-container">
+            <div class="flex-item work-experience">
+                <h3>Store Employee</h3>
+                <p>The UPS Store, 2021 - 2022</p>
+                <ul>
+                    <li>Organized inbound and outbound shipments</li>
+                    <li>Prepared shipments and calculated packing requirements</li>
+                    <li>Corresponded with clients and managed customer feedback</li>
+                    <li>Oversaw routing process and shipping orders</li>
+                </ul>
+            </div>
+            <div class="flex-item work-experience">
+                <h3>Student Intern</h3>
+                <p>Greeting Life America, 2020 - 2021</p>
+                <ul>
+                    <li>Maintained inventory and managed stock using proprietary software</li>
+                    <li>Consolidated products in warehouse</li>
+                    <li>Reviewed accuracy of order inputs</li>
+                </ul>
+            </div>
+            <div class="flex-item work-experience">
+                <h3>Freelance Editor</h3>
+                <p>St. Francis Academy, 2019 - 2023</p>
+                <ul>
+                    <li>Performed yearbook and photo editing</li>
+                    <li>Enhanced and repaired images</li>
+                    <li>Designed digital graphics</li>
+                    <li>Coordinated with yearbook team</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2><i class="fas fa-hands-helping"></i> Volunteer Experience</h2>
+        <div class="volunteer-experience">
+            <h3>Student Volunteer</h3>
+            <p>The Rotary Club of the Caldwells, 2019 - 2021</p>
             <ul>
-                <li>Livingston, NJ</li>
-                <li>+1 201 673 6367</li>
-                <li>song.yumi@outlook.com</li>
+                <li>Updated product tickets and managed merchandise lifecycle</li>
+                <li>Managed inventory and sales receipts using Microsoft Excel</li>
+                <li>Communicated with customers in daily shop operations</li>
             </ul>
-            <p>paragraph</p>
-        </main>
-    </body>
+        </div>
+    </section>
+
+    <section>
+        <h2><i class="fas fa-users"></i> Activities</h2>
+        <ul>
+            <li>Ballroom dancing (DanceSport Club - President, collegiate competitions)</li>
+            <li>Girls Who Code (Summer Immersion Program)</li>
+            <li>Volunteer for digital marketing and online fundraising products</li>
+            <li>Freelance commissions for 2D and 3D works</li>
+            <li>String orchestra (viola, violin)</li>
+        </ul>
+    </section>
+</body>
 </html>
